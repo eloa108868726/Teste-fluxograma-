@@ -1,0 +1,26 @@
+[Início]
+   ↓
+[Existe uma fonte de água identificada?]
+   ├─ Não → [Realizar prospecção e estudos geológicos] → (volta para a pergunta)
+   └─ Sim ↓
+[Qualidade da água atende aos padrões?]
+   ├─ Não → [Descartar fonte ou tratar até atender] → (volta para a pergunta)
+   └─ Sim ↓
+[Possui licença ambiental e autorização de uso?]
+   ├─ Não → [Solicitar licenciamento aos órgãos competentes] → (volta para a pergunta)
+   └─ Sim ↓
+[Infraestrutura de captação instalada?]
+   ├─ Não → [Construir poço ou sistema de captação] → (volta para a pergunta)
+   └─ Sim ↓
+[Tratamento mínimo realizado (filtragem/ozonização)?]
+   ├─ Não → [Realizar tratamento] → (volta para a pergunta)
+   └─ Sim ↓
+[Envase em recipientes esterilizados realizado?]
+   ├─ Não → [Fazer envase] → (volta para a pergunta)
+   └─ Sim ↓
+[Rotulagem conforme normas realizada?]
+   ├─ Não → [Ajustar rotulagem] → (volta para a pergunta)
+   └─ Sim ↓
+[Distribuir ao mercado]
+   ↓
+[Fim]
