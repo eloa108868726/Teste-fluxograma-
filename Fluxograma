@@ -1,26 +1,24 @@
-[Início]
-   ↓
-[Existe uma fonte de água identificada?]
-   ├─ Não → [Realizar prospecção e estudos geológicos] → (volta para a pergunta)
-   └─ Sim ↓
-[Qualidade da água atende aos padrões?]
-   ├─ Não → [Descartar fonte ou tratar até atender] → (volta para a pergunta)
-   └─ Sim ↓
-[Possui licença ambiental e autorização de uso?]
-   ├─ Não → [Solicitar licenciamento aos órgãos competentes] → (volta para a pergunta)
-   └─ Sim ↓
-[Infraestrutura de captação instalada?]
-   ├─ Não → [Construir poço ou sistema de captação] → (volta para a pergunta)
-   └─ Sim ↓
-[Tratamento mínimo realizado (filtragem/ozonização)?]
-   ├─ Não → [Realizar tratamento] → (volta para a pergunta)
-   └─ Sim ↓
-[Envase em recipientes esterilizados realizado?]
-   ├─ Não → [Fazer envase] → (volta para a pergunta)
-   └─ Sim ↓
-[Rotulagem conforme normas realizada?]
-   ├─ Não → [Ajustar rotulagem] → (volta para a pergunta)
-   └─ Sim ↓
-[Distribuir ao mercado]
-   ↓
-[Fim]
+flowchart TD
+    A[Início] --> B[1. Prospecção do local]
+    B -->|Existe potencial de aquífero ou fonte natural?| C{Potencial identificado?}
+    C -->|Sim| D[2. Coleta de amostra de água]
+    C -->|Não| B
+    
+    D -->|A amostra atende aos padrões físico-químicos e microbiológicos?| E{Qualidade aprovada?}
+    E -->|Sim| F[3. Licenciamento ambiental e autorização de lavra]
+    E -->|Não| B
+    
+    F -->|Todas as licenças concedidas?| G{Licenças aprovadas?}
+    G -->|Sim| H[4. Perfuração do poço ou captação]
+    G -->|Não| F
+    
+    H -->|Vazão e qualidade estáveis após testes?| I{Estável?}
+    I -->|Sim| J[5. Montagem da unidade de envase]
+    I -->|Não| B
+    
+    J --> K[6. Controle de qualidade contínuo]
+    K -->|Água dentro dos padrões?| L{Qualidade mantida?}
+    L -->|Sim| M[7. Distribuição e comercialização]
+    L -->|Não| J
+    
+    M --> Z[Fim]
